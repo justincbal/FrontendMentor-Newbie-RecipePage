@@ -1,28 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
 :root {
   /* Primary */
   --Nutmeg: hsl(14, 45%, 36%);
   --Dark-Raspberry: hsl(332, 51%, 32%);
   /* Neutral */
-  --Wenge-Brown: hsl(30, 10%, 34%); 
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Rose: hsl(330, 100%, 98%);
+  --Light-grey: hsl(30, 18%, 87%);
+  --Charcoal: hsl(24, 5%, 18%);
 }
 
-body, html {
+body,
+html {
   box-sizing: border-box;
+  background-color: #f3e6d7;
+  min-height: 100vh;
+  width: 100vw;
+  
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
 }
 
 #root {
-  background-color: #f3e6d7;
-  height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 main {
@@ -35,4 +49,82 @@ main {
 img {
   max-width: 100%;
   border-radius: 20px;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+li {
+  margin: 15px 0;
+}
+
+.secHead, .recipeName {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.secHead, li::marker {
+  color: var(--Nutmeg);
+}
+
+h3.secHead {
+  font-family: 'Outfit';
+  font-weight: 700;
+}
+
+h3.secHead, .preparationTime>ul>li::marker {
+  color: var(--Dark-Raspberry);
+}
+
+.preparationTime {
+  background-color: var(--Rose);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.border {
+  border-bottom: 1px solid var(--Light-grey);
+  padding: 20px 0;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableRow {
+  display: flex;
+  border-bottom: 1px solid var(--Light-grey);
+}
+
+.tableRow > p {
+  flex: 1;
+  margin-left: 50px;
+}
+
+.brownBold {
+  font-weight: 700;
+  color: var(--Nutmeg);
+}
+
+@media (max-width: 800px) {
+  #root {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    margin: 0;
+  }
+
+  main {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    /* background-color: red; */
+  }
 }
