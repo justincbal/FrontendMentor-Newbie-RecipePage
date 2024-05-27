@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <main>
-        <img src="/public/assets/images/image-omelette.jpeg" alt="omeletteImage" />
+        <img src="/assets/images/image-omelette.jpeg" alt="omeletteImage" />
         <h1 className="recipeName">Simple Omelette Recipe</h1>
         <p className="recipeDescription">
           An easy and quick dish, perfect for any meal. The classic omelette
